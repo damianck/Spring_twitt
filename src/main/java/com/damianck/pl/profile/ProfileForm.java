@@ -1,5 +1,6 @@
 package com.damianck.pl.profile;
 
+import com.damianck.pl.date.PastLocalDate;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -10,12 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProfileForm {
-    @Size(min=2)
+    @Size(min = 2)
     private String twitterHandle;
     @Email
     @NotEmpty
     private String email;
     @NotNull
+    @PastLocalDate
     private LocalDate birthDate;
     @NotNull
     private List<String> tastes = new ArrayList<>();
@@ -50,5 +52,15 @@ public class ProfileForm {
 
     public void setTastes(List<String> tastes) {
         this.tastes = tastes;
+    }
+
+    @Override
+    public String toString() {
+        return "ProfileForm{" +
+                "twitterHandle='" + twitterHandle + '\'' +
+                ", email='" + email + '\'' +
+                ", birthDate=" + birthDate +
+                ", tastes=" + tastes +
+                '}';
     }
 }

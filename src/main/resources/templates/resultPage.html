@@ -5,6 +5,8 @@
     <title>Witaj w Thymleaf!</title>
 </head>
 <body>
-<span th:text="${message}">Witaj, świecie!</span>
+<ul>
+    <li th:each="tweet : ${tweets}" th:text="${tweet}">Jakiś tekst</li>
+</ul>
 </body>
 </html>

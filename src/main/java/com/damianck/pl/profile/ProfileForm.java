@@ -1,4 +1,4 @@
-package com.damianck.pl.controller;
+package com.damianck.pl.profile;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

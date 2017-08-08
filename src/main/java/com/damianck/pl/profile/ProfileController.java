@@ -1,4 +1,4 @@
-package com.damianck.pl.controller;
+package com.damianck.pl.profile;
 
 import com.damianck.pl.date.USLocalDateFormatter;
 import org.springframework.stereotype.Controller;
